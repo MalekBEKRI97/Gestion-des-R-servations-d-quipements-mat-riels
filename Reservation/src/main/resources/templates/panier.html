@@ -1,0 +1,65 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+	<title>Panier</title>
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+		<h1  class = "">Panier</h1>
+		<table class="table">
+			<thead class = "">
+		        <tr>
+		            <th>Titre</th>
+		            <th>Delais</th>
+		            <th></th>
+		        </tr>
+		    </thead>
+			<tbody>
+				<tr th:each="materiel: ${mouhamed.materiels}">
+		            <td th:text="${materiel.titre}"></td>
+		            <td th:text="${mouhamed.delais}"></td>
+		            <td><a th:href="@{/delete(id=${materiel.id})}"><button type="button" class="btn btn-danger">supprimer</button>
+		            </a></td>
+						
+					
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+		*{
+			font-size: 110%;
+			font-family: 'Piedra', cursive;
+			margin: 10px auto 50px 20px;
+		}
+		th,h1{
+			letter-spacing: 2px;
+		}
+		td{
+			padding:50px 100px;
+		}
+		table{
+			margin-left: 100px;
+		}
+		input{
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+	</style>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script>
+	
+</body>
+
+</html>

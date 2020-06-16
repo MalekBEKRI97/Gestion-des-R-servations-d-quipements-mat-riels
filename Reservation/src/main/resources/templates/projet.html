@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<head>
+	<title>Réservations d'équipements matériels</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="projet.css">
+</head>
+<body>
+	<header>
+		<h1>Merci de selectionner vos materiels necessaires</h1>
+			
+		<a th:href="@{/reservationlist}"><button title="votre panier "></button></a>
+	</header>
+	<section>
+		<div id="i1"><a th:href="@{/reservation(id=${mouhamed.get(0).id})}" >reserver</a></div>
+		<div id="i2"><a th:href="@{/reservation(id=${mouhamed.get(1).id})}" >reserver</a></div>
+		<div id="i3"><a th:href="@{/reservation(id=${mouhamed.get(2).id})}" >reserver</a></div>
+		<div id="i4"><a th:href="@{/reservation(id=${mouhamed.get(3).id})}" >reserver</a></div>
+		<div id="i5"><a th:href="@{/reservation(id=${mouhamed.get(4).id})}" >reserver</a></div>
+		<div id="i6"><a th:href="@{/reservation(id=${mouhamed.get(5).id})}" >reserver</a></div>
+	</section>
+
+
+
+
+	
+
+</body>
+</html>
